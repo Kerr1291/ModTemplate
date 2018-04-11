@@ -34,3 +34,5 @@ sysinfo.txt
 *.unitypackage
 /Charming/obj
 /Charming/bin
+/ModTemplate/bin
+/ModTemplate/obj

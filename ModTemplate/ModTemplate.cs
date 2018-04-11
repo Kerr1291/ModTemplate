@@ -3,17 +3,19 @@ using Modding;
 using UnityEngine;
 using ModCommon;
 
-namespace CharmingMod
+namespace ModTemplate
 {
     /*
+     * Add a reference to ModCommon, UnityEngine.dll, and PlayMaker.dll to allow this to build
+     * 
      * For a nicer building experience, change 
      * SET MOD_DEST="K:\Games\steamapps\common\Hollow Knight\hollow_knight_Data\Managed\Mods"
      * in install_build.bat to point to your hollow knight mods folder...
      * 
      */
-    public partial class ModCommon : Mod<SaveSettings, ModSettings>, ITogglableMod
+    public partial class ModTemplate : Mod<SaveSettings, ModSettings>, ITogglableMod
     {
-        public static ModCommon Instance { get; private set; }
+        public static ModTemplate Instance { get; private set; }
 
         CommunicationNode comms;
 
@@ -42,7 +44,7 @@ namespace CharmingMod
             string globalSettingsFilename = Application.persistentDataPath + ModHooks.PathSeperator + GetType().Name + ".GlobalSettings.json";
 
             bool forceReloadGlobalSettings = false;
-            if( GlobalSettings != null && GlobalSettings.SettingsVersion != ModCommonSettingsVars.GlobalSettingsVersion )
+            if( GlobalSettings != null && GlobalSettings.SettingsVersion != ModTemplateSettingsVars.GlobalSettingsVersion )
             {
                 forceReloadGlobalSettings = true;
             }
@@ -64,7 +66,7 @@ namespace CharmingMod
 
                 GlobalSettings.Reset();
 
-                GlobalSettings.SettingsVersion = ModCommonSettingsVars.GlobalSettingsVersion;
+                GlobalSettings.SettingsVersion = ModTemplateSettingsVars.GlobalSettingsVersion;
             }
 
             SaveGlobalSettings();
@@ -81,7 +83,7 @@ namespace CharmingMod
         //TODO: update when version checker is fixed in new modding API version
         public override string GetVersion()
         {
-            return ModCommonSettingsVars.ModCommonVersion;
+            return ModTemplateSettingsVars.ModVersion;
         }
 
         //TODO: update when version checker is fixed in new modding API version

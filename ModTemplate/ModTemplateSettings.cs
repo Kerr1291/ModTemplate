@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using Modding;
 
-namespace CharmingMod
+namespace ModTemplate
 {
-    public class CharmingSettingsVars
+    public class ModTemplateSettingsVars
     {
         //change when the global settings are updated to force a recreation of the global settings
         public const string ModVersion = "0.0.1";

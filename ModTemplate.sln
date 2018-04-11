@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Charming", "Charming\Charming.csproj", "{6840ABD8-113F-48E8-B125-19394C0AA354}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModTemplate", "ModTemplate\ModTemplate.csproj", "{6840ABD8-113F-48E8-B125-19394C0AA354}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
